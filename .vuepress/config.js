@@ -28,7 +28,7 @@ module.exports = {
     ],
     [
       "vuepress-plugin-auto-sidebar", {
-        sidebarDepth: 2
+        sidebarDepth: 1
         //生成nav ，我觉得不好用，可能我不会用吧
         // nav: true
       },
@@ -39,7 +39,7 @@ module.exports = {
     //导航栏插件，生成的不太满意
     // nav: nav,
     //最后更新时间
-    lastUpdated: '最后更新时间', // string | boolean
+    lastUpdated: '更新时间', // string | boolean
     //导航栏 Logo 公共文件public中
     logo: '/assets/img/logo.png',
     //导航栏链接==========
@@ -89,8 +89,9 @@ module.exports = {
         text: '工具',
         ariaLabel: 'Language Menu',
         items: [
-          { text: 'Markdown语法', link: '/工具/Markdown/' },
-          { text: 'Webpack', link: '/工具/Webpack/' }
+          { text: 'Markdown', link: '/工具/Markdown/' },
+          { text: 'Webpack', link: '/工具/Webpack/' },
+          { text: 'git', link: '/工具/git/' }
         ]
       },
       //二级分组

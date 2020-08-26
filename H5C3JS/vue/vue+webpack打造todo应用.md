@@ -1,9 +1,9 @@
 ---
 title: vue+webpack打造todo应用
-# autoPrev: README
-autoNext: README
+autoPrev: README
+# autoNext: README
 ---
-## vue+webpack打造todo应用
+# vue+webpack打造todo应用
 前端工程
 
 webpack
