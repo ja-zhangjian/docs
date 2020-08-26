@@ -33,7 +33,18 @@ module.exports = {
         // nav: true
       },
     ],
-    ['@vuepress/medium-zoom']
+    [
+      'vuepress-plugin-medium-zoom',
+      {
+        selector: 'img',
+        // delay: 1000,
+        options: {
+          // margin: 24,
+          // background: '#3eaf74',
+          // scrollOffset: 0,
+        },
+      },
+    ],
   ],
   themeConfig: {
     //导航栏插件，生成的不太满意
