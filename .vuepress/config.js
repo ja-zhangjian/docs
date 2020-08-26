@@ -25,11 +25,15 @@ module.exports = {
         }
       },
 
-    ], [
+    ],
+    [
       "vuepress-plugin-auto-sidebar", {
-        nav: true
+        sidebarDepth: 2
+        //生成nav ，我觉得不好用，可能我不会用吧
+        // nav: true
       },
-    ]
+    ],
+    ['@vuepress/medium-zoom']
   ],
   themeConfig: {
     //导航栏插件，生成的不太满意
@@ -67,8 +71,8 @@ module.exports = {
         items: [
           { text: 'HTML', link: '/H5C3JS/HTML/' },
           { text: 'CSS', link: '/H5C3JS/CSS/' },
-          { text: 'JavaScript', link: '/H5C3JS/JavaScript/' }
-
+          { text: 'JavaScript', link: '/H5C3JS/JavaScript/' },
+          { text: 'Vue', link: '/H5C3JS/vue/' },
         ]
       },
       //一级分组
@@ -85,8 +89,8 @@ module.exports = {
         text: '工具',
         ariaLabel: 'Language Menu',
         items: [
-          { text: 'Markdown语法', link: '/Markdown/' },
-          { text: 'Japanese', link: '/language/japanese/' }
+          { text: 'Markdown语法', link: '/工具/Markdown/' },
+          { text: 'Webpack', link: '/工具/Webpack/' }
         ]
       },
       //二级分组
