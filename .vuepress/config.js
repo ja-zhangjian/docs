@@ -97,6 +97,15 @@ module.exports = {
       },
       //一级分组
       {
+        text: '项目',
+        ariaLabel: 'Language Menu',
+        items: [
+          { text: 'JTodo', link: '/项目/vuewebpack/' },
+
+        ]
+      },
+      //一级分组
+      {
         text: '工具',
         ariaLabel: 'Language Menu',
         items: [

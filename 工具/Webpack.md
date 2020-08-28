@@ -1,7 +1,7 @@
 ---
  sidebarDepth: 2
 ---
-# Webpack
+# Webpack4.0
 webpack是js应用的静态模块打包工具
 
 模块+打包
@@ -13,7 +13,9 @@ webpack是js应用的静态模块打包工具
 PS:不说这个开发时依赖的，是真的坑人，乐色。
 
 ```sh
-npm i webpack --save-dev 
+npm i webpack webpack-cli -D 
+//等价于下面的
+npm install webpack webpack-cli --save-dev
 ```
 终端执行的webpack都是全局的
 
@@ -60,8 +62,14 @@ npm install --save-dev less-loader less
 less-loader是需要less作为peerDependency，这样就能精准做版本控制
 那么什么是peerDependency?这个合成词是同等依赖，ok，够蠢的，
 npm的官网的举例，也是云里雾里的
-简言之就是less是JQ，less-loader就是JQUI，没less这个核心依赖就不行，不信你不安装less试试
+简言之就是less是JQ，less-loader就是JQUI，没less这个核心依赖就不行，不信你不安装less试试。有个关于vue-loader的解释，比较恰当
+
+> 关于vueloader的配置问题
+>1. 你应该将 `vue-loader` 和 `vue-template-compiler` 一起安装
+>2. 每个 `vue` 包的新版本发布时，一个相应版本的 `vue-template-compiler` 也会随之发布。编译器的版本必须和基本的 `vue` 包保持同步，这样 `vue-loader` 就会生成兼容运行时的代码。这意味着你每次升级项目中的 `vue` 包时，也应该匹配升级 `vue-template-compiler`。
+
 PS：我说实话，让小白来看文档的人，让你家小孩上来就学逍遥游，是不是傻
+
 ```javascript
 module.exports = {
     ...
@@ -179,6 +187,7 @@ loader 核心 环境
 ```
 这个是中文官网的，但是run的时候报错，让我是没想到的，提示需要安装
 
+好像是webpack3与4导入的差别，找了半天没有具体详解
  @babel/core
 
  @babel/preset-env
