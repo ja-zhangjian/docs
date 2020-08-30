@@ -101,7 +101,7 @@ module.exports = {
         ariaLabel: 'Language Menu',
         items: [
           { text: 'JTodo', link: '/项目/vuewebpack/' },
-
+          { text: 'BigNews', link: '/项目/BigNews/' },
         ]
       },
       //一级分组

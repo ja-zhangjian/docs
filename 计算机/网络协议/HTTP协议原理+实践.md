@@ -167,7 +167,7 @@ res.writeHead(200, {
 可缓存性：
 * public：代表，返回的时候，任何代理，浏览器都可以执行缓存操作
 * private: 代表，发起请求的浏览器才可以缓存
-* no-cache:任何都不可以缓存
+* no-cache:使用缓存前先验证
 
 到期：
 * max-age = \<seconds>
@@ -192,17 +192,135 @@ res.writeHead(200, {
   })
 ```
 ### Last-Modified和Etag的使用
+* Last-Modified 上次修改时间
+
+if-modified-since/in-unmodified-since
+
+对比上次修改时间来验证资源是否需要更新
+
+*  Etag 数据签名
+
+IF_MATCH/if-non-match
+
+对比资源的签名来判断是否使用缓存
 
 ### cookie和session
+
+* cookie 
+
+Set-Cookie设置
+
+下次请求自动带上，键值对，可以设置很多个
+
+max-age和expires设置过期时间、Secure只在https的时候发送、HttpOnly无法通过document.cookie访问，阻止js通过cookie访问，保证数据安全
+
+domain可以设置主域名下，子域名都访问时都带上cookie
+
+使用cookie来保存session，把用户登录的key设置到cookie里面。拿着sessionID对着服务的数据查找用户的数据（不会这么做了，1服务器压力大，2服务器需要大量存储用户数据，3不安全，用户的id也是用户数据，存储在客服端不太好
+
+session只要我没保证能够定位到用户，就算是session的实现方法
 ### HTTP长连接
+1.1里面的
+
+谷歌浏览器一次性并发6个
+
+connection：keeplive/close
+
+http请求是在tcp连接上面进行发送的，一个tcp连接可以发送多http请求，1.1里面有先后顺序，所以要并发发送请求。
+
 ### 数据协商
+客户端协商
+
+Accept指定我想要的数据类型
+
+Accept-Ecoding代表数据以什么编码方式来进行传输，数据压缩
+
+Accept-Language 
+
+User-Agent 根据这个返回是浏览器页面，还是移动端的页面，适配不同浏览器
+
+服务端协商
+
+Cntent-Type 返回数据的数据格式
+
+Cntent-Ecoding
+
+Cntent-Language
+
 ### Rediret
+请求时，发现资源不在了
+
+301永久重定向，就不用在问服务器了，直接跳转，从缓存里面读取，就算服务器改了地址，如果客户端自己不清缓存，那就完蛋，这个应该不常用。
+
+302临时重定向，还是要问一下服务器
+
+
 ### CSP
+Content-Security-Policy(内容安全策略）
+
+限制资源的获取
+
+  default-src全局限制、指定资源类型来限制
+
+报告资源获取越权
 
 ## Nginx代理以及面向未来的HTTP
+### Nginx的安装和基础代理配置
+```javascript
+server{
+    listen  80;
+    server_name 地址；
+    location /{
+    proxy_pass http://127.0.0.1:8888;
+	proxy_set_header HOST $host//修改代理的http头
+}
+```
+### Nginx代理配置和代理缓存的用处
+proxy_cache_path 地址 level=1:2 keyz_zone=名字:10m
 
+proxy_cache 名字
+
+速度快，在代理设置，如果代理缓存设置过了，可以读代理缓存
+
+s-maxage代理缓存的时间
+
+private 只有浏览器才能缓存
+
+no-store，所有的都不能缓存
+
+Vary用来只能http的头的值相同时，再使用缓存，这个头会存在服务端那边
+### HTTPS解析
+HTTP不安全，明文传输
+
+HTTPS 加密 私钥，公钥
+
+<img :src="$withBase('/计算机/网络协议/https.png')">
+
+### 使用Nginx部署HTTPS服务
+需要生成公钥，私钥
+
+默认端口443
+```javascript
+ssl on
+ssl_certificate_key
+ssl_certificate
+```
+浏览器需要安全证书，来证明url是安全的
+### HTTP2的优势和配置HTTP2的简单使用
+HTTPS的优势
+
+信道复用、分帧传输、Server Push
+
+Link;这个请求，服务端可以推送内容（不安全的证书，不接受推送）
+
+Nginx可以兼容1.1和2，代理服务器可以转化协议给服务器
 ## 总结
+HTTP原理=》cp连接上面传输（三次，四次），长连接，性能提升
 
+HTTP技术点=》缓存，验证缓存，csp，cors
 
-<img :src="$withBase('/计算机/网络协议/tcp.jpg')" class="my-img">
-<img :src="$withBase('/assets/img/logo.png')" class="my-img">
+Nginx实践、面向未来的HTTP=》Nginx好处，HTTP2的安全，性能提升
+
+<img :src="$withBase('/计算机/网络协议/tcp.jpg')">
+
+后记：知道就行了，感觉要深入得实操。

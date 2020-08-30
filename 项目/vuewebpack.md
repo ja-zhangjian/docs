@@ -128,9 +128,7 @@ module.exports = {
 
 实际上我测试也是有问题的，下面说一下
 
-style-loader是作为顶层的loader来渲染到dom上的，这也就意味着，尽量在处理css或者预编译的loader的顶层上加上
-
-style-loader。为此我们看一下webpack的英文官网，一定要是英文！！！
+style-loader是作为顶层的loader来渲染到dom上的，这也就意味着，尽量在处理css或者预编译的loader的顶层上加上style-loader。为此我们看一下webpack的英文官网，一定要是英文！！！
 
 关于style-loader的：
 
