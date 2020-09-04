@@ -1,7 +1,7 @@
 ---
 title: Vue深精透
 # autoPrev: README
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 # Vue深精透
 ## vue核心知识
@@ -141,12 +141,155 @@ props：{}
 ~~~
 
 ### 8.vue的组件继承
+~~~js
+Vue.extend()
+propsData:{}特例
+~~~
+先用父组件，在用子组件
+
+可以用$parent的属性改变父组，$parent是可以改变的(必须在new的时候)，不推荐，脑子会乱，循环渲染的问题。
 
 ### 9.vue的组件自定义双向绑定
-
+子组件：props承接父组件，改变值的时候，发射方法到父组件，父组件用v-model绑定value的值。
 ### 10.vue的组件高级属性
+匿名插槽
+
+具名插槽
+
+作用域插槽
+(slot-scope指令)
+
+少用$refs修改vue的实例
+
+provide(){return } 默认不提供双向绑定的属性，需要自定义
+~~~js
+Object.defineProperty(data,'value',{
+    get:()=>this.value,
+    enumerable:true
+})
+~~~
+inject:[]
+
+尽量别用，vue3用代理了
 
 ### 11vue的组件render function
+~~~js
+//createElement虚拟dom
+render(createElement){
+    return createElement(dom,{
+     //属性赋值   
+    },)
+}
+~~~
+## Vue-Router和Vuex
+### Vue-router集成
+```js
+export defult ()=>{
+    return new Router({
+        routes
+    })
+}
+```
+为了服务端渲染，防止内存溢出。
+### Vue-router配置
+~~~js
+{
+   path:'/',
+   redirect:'/app'
+}
+~~~
+~~~js
+export defult()=>{
+    return new Router({
+        routes,
+        mode:'history',
+        base:'',
+        linkActiveClsaa:'',
+        linkExactActiveClass:'',//子集
+        scrollBehavior(to,from,savedPosition){
+            if(savedPosition){
+                return savedPosition
+            }else{
+                return{x:0 ,y:0}
+            }
+        },//保存滚动位置
+        fallback:ture,//转hash模式跳转，自动处理
+        parseQuery(query){},
+        stringifyQuery(obj){},
+    })
+}
+~~~
+#不被seo解析
+
+### Vue-router路由参数传递
+name属性
+
+meta
+
+children数组
+
+transition 路由显示隐藏的效果
+
+：变量 $route.params{} query
+
+props:true 推荐这么做
+### Vue-router导航守卫
+全局导航守卫 
+
+router.beforEach((to,from,next)=>{})
+
+router.beforResolve()
+
+router.afterEach()
+
+路由配置的钩子beforeEnter(){}
+
+组件内部的钩子
+
+beforeRouteEnter(){}
+
+beforeRouteUpdate(){}
+
+beforeRouteLeave(){}
+### VueX集成
+### VueXstate和getters
+### VueXmutation和action
+### VueX模块
+### VueX其他api和配置
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

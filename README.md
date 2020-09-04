@@ -2,7 +2,7 @@
 home: true
 heroImage: /come.jpg
 heroText: 迷信坚持有意义
-tagline: Talk is cheap. Show me the code
+tagline: Talk is cheap. Show me the code.
 actionText: 进入笔记 →
 actionLink: /guide
 # features:
@@ -19,6 +19,6 @@ footer: MIT Licensed | Copyright © 2020-present Jiabing
 
 ::: danger
 
-这根本不是什么文档，仅仅是一个个人笔记而已。
+这根本不是什么文档，仅仅是个人笔记、随想录而已。
 
 :::
