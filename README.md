@@ -17,8 +17,11 @@ footer: MIT Licensed | Copyright © 2020-present Jiabing
 
 ## 关于~~文档~~笔记
 
-::: danger
+<!-- ::: tip -->
+<!-- ::: danger -->
 
-这根本不是什么文档，仅仅是个人笔记、随想录而已。
+::: warning 提示
+
+这根本不是什么文档，仅仅是个人笔记、随笔录而已。
 
 :::

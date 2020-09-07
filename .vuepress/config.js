@@ -37,7 +37,7 @@ module.exports = {
       },
     ],
     [
-      "vuepress-plugin-medium-zoom",
+      "@vuepress/medium-zoom",
       {
         selector: "img",
         // delay: 1000,
@@ -48,6 +48,7 @@ module.exports = {
         },
       },
     ],
+    ["@vuepress/back-to-top", true],
   ],
   themeConfig: {
     //导航栏插件，生成的不太满意
@@ -83,20 +84,17 @@ module.exports = {
         text: "前端",
         ariaLabel: "Language Menu",
         items: [
-          { text: "HTML", link: "/H5C3JS/HTML/" },
-          { text: "CSS", link: "/H5C3JS/CSS/" },
-          { text: "JavaScript", link: "/H5C3JS/JavaScript/" },
-          { text: "Vue", link: "/H5C3JS/vue/" },
+          { text: "HTML", link: "/前端/HTML/" },
+          { text: "CSS", link: "/前端/CSS/" },
+          { text: "JavaScript", link: "/前端/JavaScript/" },
+          { text: "Vue", link: "/前端/vue/" },
         ],
       },
       //一级分组
       {
         text: "后端",
         ariaLabel: "Language Menu",
-        items: [
-          { text: "Chinese", link: "/language/chinese/" },
-          { text: "Japanese", link: "/language/japanese/" },
-        ],
+        items: [{ text: "Node", link: "/后端/Node/" }],
       },
       //一级分组
       {
@@ -124,19 +122,20 @@ module.exports = {
         items: [
           { text: "关于我的", link: "/about" },
           {
-            text: "Group1",
+            text: "面试",
             items: [
-              { text: "Home", link: "/" },
-              { text: "Guide", link: "/guide/" },
+              { text: "H5C3", link: "/" },
+              { text: "JS", link: "/guide/" },
+              { text: "试题合集", link: "/guide/" },
             ],
           },
-          {
-            text: "Group2",
-            items: [
-              { text: "Home", link: "/" },
-              { text: "Guide", link: "/guide/" },
-            ],
-          },
+          // {
+          //   text: "Group2",
+          //   items: [
+          //     { text: "Home", link: "/" },
+          //     { text: "Guide", link: "/guide/" },
+          //   ],
+          // },
         ],
       },
       //外部链接，新页面跳转

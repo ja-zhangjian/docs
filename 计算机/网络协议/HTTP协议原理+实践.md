@@ -281,7 +281,7 @@ Cntent-Ecoding
 
 Cntent-Language
 
-### Rediret
+### Redirect
 
 请求时，发现资源不在了
 
