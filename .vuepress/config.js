@@ -122,20 +122,24 @@ module.exports = {
         items: [
           { text: "关于我的", link: "/about" },
           {
-            text: "面试",
+            text: "面试合集",
             items: [
-              { text: "H5C3", link: "/" },
+              { text: "H5C3", link: "/guide/" },
               { text: "JS", link: "/guide/" },
               { text: "试题合集", link: "/guide/" },
             ],
           },
-          // {
-          //   text: "Group2",
-          //   items: [
-          //     { text: "Home", link: "/" },
-          //     { text: "Guide", link: "/guide/" },
-          //   ],
-          // },
+          {
+            text: "文章收藏",
+            items: [{ text: "文章收藏", link: "/文章收藏/" }],
+          },
+          {
+            text: "我的随笔",
+            items: [
+              { text: "随笔", link: "/guide/" },
+              { text: "总结", link: "/guide/" },
+            ],
+          },
         ],
       },
       //外部链接，新页面跳转
