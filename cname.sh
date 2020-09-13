@@ -4,4 +4,4 @@
 
 set -e
 
-echo 'jiabing-china.github.io/docs' > docs/.vuepress/dist/CNAME
+echo 'jiabing-china.github.io' > docs/.vuepress/dist/CNAME
