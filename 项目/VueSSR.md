@@ -5,7 +5,15 @@ title: vuessr
 ---
 
 # vuessr
+##   服务端渲染
+### 1开发时服务端渲染的配置和原理
+<img :src="$withBase('/项目/服务端渲染.png')">
 
+### 2使用koa实现node server
+### 3服务端渲染的entry配置
+### 4开发时服务端渲染静态资源路径处理
+### 5使用vue-meta处理元信息
+### 6生产环境服务端渲染
 ## vue 核心知识
 
 ### 1.小准备
@@ -291,11 +299,25 @@ beforeRouteUpdate(){}
 beforeRouteLeave(){}
 
 ### VueX 集成
-
+new store=>这个不就是脚手架生成的吗？
 ### VueXstate 和 getters
+默认的state抽离出来
 
+getters相当于组件的computed，数据的预处理
+
+问题：,,,在babel的env环境中可能不支持，安装babel-presetstag-1
 ### VueXmutation 和 action
+store.commit传入额外的参数，即 mutation 的 载荷(payload)
 
+开发环境设置strict为true，严禁从外部修改store的状态
 ### VueX 模块
+Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割
 
+namespaced: true
+
+root: true
+
+模块热重载
 ### VueX 其他 api 和配置
+ 解绑、watch、subscribe、subscribeAction，自定义插件
+<img :src="$withBase('/项目/vuex.png')">

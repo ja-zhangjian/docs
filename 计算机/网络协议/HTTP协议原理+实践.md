@@ -113,10 +113,9 @@ HTTP CODE：服务器对请求的处理结果
 ### 创建一个简单的 Web 服务
 
 ```javascript
-//node自带模块
+//node自带模块,我傻了，这个自动格式化，服了
 const http = require("http");
 const fs = require("fs");
-
 http
   .createServer((req, res) => {
     const html = fs.readFileSync("test.html", "utf8");

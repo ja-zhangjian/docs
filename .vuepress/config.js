@@ -1,6 +1,7 @@
 const moment = require("moment");
 // const nav = require('./nav')
-
+const sortFn = (key) => (a, b) =>
+  a[key].split("-")[1][length - 1] > b[key].split("-")[1][length - 1] ? 1 : -1;
 module.exports = {
   //seo优化
   title: "嘉炳的笔记",
@@ -32,6 +33,7 @@ module.exports = {
       "vuepress-plugin-auto-sidebar",
       {
         sidebarDepth: 0,
+        // sort: sortFn,
         //生成nav ，我觉得不好用，可能我不会用吧
         // nav: true
       },
@@ -68,11 +70,11 @@ module.exports = {
         text: "计算机",
         ariaLabel: "Language Menu",
         items: [
-          { text: "组成原理", link: "/计算机/组成原理/" },
-          { text: "操作系统", link: "/计算机/操作系统/" },
+          // { text: "组成原理", link: "/计算机/组成原理/" },
+          // { text: "操作系统", link: "/计算机/操作系统/" },
           { text: "网络协议", link: "/计算机/网络协议/HTTP协议原理+实践.md" },
           { text: "数据结构与算法", link: "/计算机/数据结构与算法/" },
-          { text: "设计模式", link: "/计算机/设计模式/" },
+          // { text: "设计模式", link: "/计算机/设计模式/" },
         ],
       },
       //外部链接，原页面跳转
@@ -84,8 +86,8 @@ module.exports = {
         text: "前端",
         ariaLabel: "Language Menu",
         items: [
-          { text: "HTML", link: "/前端/HTML/" },
-          { text: "CSS", link: "/前端/CSS/" },
+          // { text: "HTML", link: "/前端/HTML/" },
+          // { text: "CSS", link: "/前端/CSS/" },
           { text: "JavaScript", link: "/前端/JavaScript/" },
           { text: "Vue", link: "/前端/vue/" },
         ],
@@ -124,22 +126,24 @@ module.exports = {
           {
             text: "面试合集",
             items: [
-              { text: "H5C3", link: "/guide/" },
-              { text: "JS", link: "/guide/" },
-              { text: "试题合集", link: "/guide/" },
+              { text: "H5C3", link: "/面试/H5C3/" },
+              { text: "JS", link: "/面试/JS/" },
+              { text: "VUE", link: "/面试/vue/" },
+              { text: "试题合集", link: "/面试/试题合集/" },
+              { text: "杂项", link: "/面试/杂项/" },
             ],
           },
           {
             text: "文章收藏",
             items: [{ text: "文章收藏", link: "/文章收藏/" }],
           },
-          {
-            text: "我的随笔",
-            items: [
-              { text: "随笔", link: "/guide/" },
-              { text: "总结", link: "/guide/" },
-            ],
-          },
+          // {
+          //   text: "我的随笔",
+          //   items: [
+          //     { text: "随笔", link: "/guide/" },
+          //     { text: "总结", link: "/guide/" },
+          //   ],
+          // },
         ],
       },
       //外部链接，新页面跳转
