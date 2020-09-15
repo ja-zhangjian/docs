@@ -5,4 +5,8 @@ autoPrev: JS运行原理二
 
 # JS 运行原理三
 
-事件循环和异步回调？
+`调用栈`
+
+栈和队列
+
+[参考 B 站 objtube 的卢克儿](https://space.bilibili.com/5104803/)

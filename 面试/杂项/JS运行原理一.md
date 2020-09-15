@@ -17,4 +17,4 @@ js 是如何被编译的？
 
 字节码最后通过编译器生成机器代码，由于不同的处理器平台使用的机器代码会有差异，所以编译器会根据当前平台，来编译出相应的机器代码，这里的机器代码就是汇编代码。（简化流程）
 
-[参考 B 站 objtube 的卢克儿](https://www.bilibili.com/video/BV1x54y1B7RE)
+[参考 B 站 objtube 的卢克儿](https://space.bilibili.com/5104803/)
