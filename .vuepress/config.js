@@ -7,28 +7,37 @@ module.exports = {
   title: "嘉炳的笔记",
   description: "仅做生活学习的记录",
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["meta", { rel: "author", content: "Jiabing" }],
+    ["link", {
+      rel: "icon",
+      href: "/favicon.ico"
+    }],
+    ["meta", {
+      rel: "author",
+      content: "Jiabing"
+    }],
     [
       "meta",
-      { rel: "keywords", content: "Jiabing,嘉炳,夹饼,生活,学习，记录,前端" },
+      {
+        rel: "keywords",
+        content: "Jiabing,嘉炳,夹饼,生活,学习，记录,前端"
+      },
     ],
   ],
   //base githubpage部署
   base: "/docs/",
   plugins: [
-    [
-      "@vuepress/last-updated",
-      {
-        transformer: (timestamp) => {
-          // 不要忘了安装 moment
-          // const moment = require('moment')
-          // moment.locale(lang)(多语言模式、记得上面加lang参数)
-          moment.locale("zh-cn");
-          return moment(timestamp).format("LLLL");
-        },
-      },
-    ],
+    // [
+    //   "@vuepress/last-updated",
+    //   {
+    //     transformer: (timestamp) => {
+    //       // 不要忘了安装 moment
+    //       // const moment = require('moment')
+    //       // moment.locale(lang)(多语言模式、记得上面加lang参数)
+    //       moment.locale("zh-cn");
+    //       return moment(timestamp).format("LLLL");
+    //     },
+    //   },
+    // ],
     [
       "vuepress-plugin-auto-sidebar",
       {
@@ -56,15 +65,21 @@ module.exports = {
     //导航栏插件，生成的不太满意
     // nav: nav,
     //最后更新时间
-    lastUpdated: "更新时间", // string | boolean
+    // lastUpdated: "更新时间", // string | boolean
     //导航栏 Logo 公共文件public中
     logo: "/assets/img/logo.png",
     //导航栏链接==========
     nav: [
       //空，首页跳转
-      { text: "首页", link: "/" },
+      {
+        text: "首页",
+        link: "/"
+      },
       //路由跳转
-      { text: "先导", link: "/guide" },
+      {
+        text: "先导",
+        link: "/guide"
+      },
       //一级分组
       {
         text: "计算机",
@@ -72,8 +87,14 @@ module.exports = {
         items: [
           // { text: "组成原理", link: "/计算机/组成原理/" },
           // { text: "操作系统", link: "/计算机/操作系统/" },
-          { text: "网络协议", link: "/计算机/网络协议/HTTP协议原理+实践.md" },
-          { text: "数据结构与算法", link: "/计算机/数据结构与算法/" },
+          {
+            text: "网络协议",
+            link: "/计算机/网络协议/HTTP协议原理+实践.md"
+          },
+          {
+            text: "数据结构与算法",
+            link: "/计算机/数据结构与算法/"
+          },
           // { text: "设计模式", link: "/计算机/设计模式/" },
         ],
       },
@@ -88,22 +109,33 @@ module.exports = {
         items: [
           // { text: "HTML", link: "/前端/HTML/" },
           // { text: "CSS", link: "/前端/CSS/" },
-          { text: "JavaScript", link: "/前端/JavaScript/" },
-          { text: "Vue", link: "/前端/vue/" },
+          {
+            text: "JavaScript",
+            link: "/前端/JavaScript/"
+          },
+          {
+            text: "Vue",
+            link: "/前端/vue/"
+          },
         ],
       },
       //一级分组
       {
         text: "后端",
         ariaLabel: "Language Menu",
-        items: [{ text: "Node", link: "/后端/Node/" }],
+        items: [{
+          text: "Node",
+          link: "/后端/Node/"
+        }],
       },
       //一级分组
       {
         text: "项目",
         ariaLabel: "Language Menu",
-        items: [
-          { text: "JTodo", link: "/项目/1_VueWebpack/" },
+        items: [{
+            text: "JTodo",
+            link: "/项目/VueWebpack/"
+          },
           // { text: "VueSSR", link: "/项目/VueSSR/" },
           // { text: "BigNews", link: "/项目/BigNews/" },
         ],
@@ -112,30 +144,57 @@ module.exports = {
       {
         text: "工具",
         ariaLabel: "Language Menu",
-        items: [
-          { text: "Markdown", link: "/工具/Markdown/" },
-          { text: "Webpack", link: "/工具/Webpack/" },
-          { text: "git", link: "/工具/git/" },
+        items: [{
+            text: "Markdown",
+            link: "/工具/Markdown/"
+          },
+          {
+            text: "Webpack",
+            link: "/工具/Webpack/"
+          },
+          {
+            text: "git",
+            link: "/工具/git/"
+          },
         ],
       },
       //二级分组
       {
         text: "更多",
-        items: [
-          { text: "关于我的", link: "/about" },
+        items: [{
+            text: "关于我的",
+            link: "/about"
+          },
           {
             text: "面试合集",
-            items: [
-              { text: "H5C3", link: "/面试/H5C3/" },
-              { text: "JS", link: "/面试/JS/" },
-              { text: "VUE", link: "/面试/vue/" },
-              { text: "试题合集", link: "/面试/试题合集/" },
-              { text: "杂项", link: "/面试/杂项/" },
+            items: [{
+                text: "H5C3",
+                link: "/面试/H5C3/"
+              },
+              {
+                text: "JS",
+                link: "/面试/JS/"
+              },
+              {
+                text: "VUE",
+                link: "/面试/vue/"
+              },
+              {
+                text: "试题合集",
+                link: "/面试/试题合集/"
+              },
+              {
+                text: "杂项",
+                link: "/面试/杂项/"
+              },
             ],
           },
           {
             text: "文章收藏",
-            items: [{ text: "文章收藏", link: "/文章收藏/" }],
+            items: [{
+              text: "文章收藏",
+              link: "/文章收藏/"
+            }],
           },
           // {
           //   text: "我的随笔",
@@ -147,7 +206,10 @@ module.exports = {
         ],
       },
       //外部链接，新页面跳转
-      { text: "GitHub", link: "https://github.com/jiabing-china" },
+      {
+        text: "GitHub",
+        link: "https://github.com/jiabing-china"
+      },
     ],
     //导航栏链接==========
     // sidebar: 'auto' 自动生成

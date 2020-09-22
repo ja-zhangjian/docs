@@ -80,7 +80,7 @@ title: vue使用
 
 ## 如何用自定义事件进行 vue 组件通讯
 
-## vue 父子组件生命周期调用顺序试看
+## vue 父子组件生命周期调用顺序
 
 1. vue 组件使用
 
@@ -92,6 +92,46 @@ title: vue使用
   - 挂载是先子后父
   - 更新前是先父后子
   - 更新后是先子后父
+
+> 加载渲染过程
+
+> 同步引入时生命周期顺序为：
+
+> 父组件的 beforeCreate、created、beforeMount --> 所有子组件的 beforeCreate、created、beforeMount --> 所有子组件的 mounted --> 父组件的 mounted
+
+> 总结：父组件先创建，然后子组件创建；子组件先挂载，然后父组件挂载
+
+> 若有孙组件呢？
+
+> 父组件先 beforeCreate => created => beforeMount ,
+
+> 然后子组件开始 beforeCreate => created => beforeMount ，
+
+> 然后孙组件 beforeCreate => created => beforeMount => mounted，
+
+> 孙组件挂载完成了，
+
+> 子组件 mounted，
+
+> 父组件再 mounted
+
+> 异步引入时生命周期顺序为：
+
+> 父组件的 beforeCreate、created、beforeMount、mounted --> 子组件的 beforeCreate、created、beforeMount、mounted
+
+> 总结：父组件创建，父组件挂载；子组件创建，子组件挂载。
+
+> 子组件更新过程
+
+> 父 beforeUpdate->子 beforeUpdate->子 updated->父 updated
+
+> 父组件更新过程
+
+> 父 beforeUpdate->父 updated
+
+> 销毁过程
+
+> 父 beforeDestroy->子 beforeDestroy->子 destroyed->父 destroyed
 
 ## vue 高级特性
 
