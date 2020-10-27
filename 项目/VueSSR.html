@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuessr(努力啃) | 嘉炳的笔记</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/docs/favicon.ico">
+    <meta name="description" content="仅做生活学习的记录">
+    <meta rel="author" content="Jiabing">
+    <meta rel="keywords" content="Jiabing,嘉炳,夹饼,生活,学习，记录,前端">
+    <link rel="preload" href="/docs/assets/css/0.styles.00f9c8c7.css" as="style"><link rel="preload" href="/docs/assets/js/app.89439026.js" as="script"><link rel="preload" href="/docs/assets/js/2.a3a8f7c5.js" as="script"><link rel="preload" href="/docs/assets/js/90.b2fd718c.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.5e5765ce.js"><link rel="prefetch" href="/docs/assets/js/11.b26ed42c.js"><link rel="prefetch" href="/docs/assets/js/12.8814a90a.js"><link rel="prefetch" href="/docs/assets/js/13.478a751a.js"><link rel="prefetch" href="/docs/assets/js/14.7c6ce0b2.js"><link rel="prefetch" href="/docs/assets/js/15.3d50a897.js"><link rel="prefetch" href="/docs/assets/js/16.c26e83da.js"><link rel="prefetch" href="/docs/assets/js/17.2dd9d11a.js"><link rel="prefetch" href="/docs/assets/js/18.c9c57158.js"><link rel="prefetch" href="/docs/assets/js/19.0a1f39fa.js"><link rel="prefetch" href="/docs/assets/js/20.3ccef31e.js"><link rel="prefetch" href="/docs/assets/js/21.69631242.js"><link rel="prefetch" href="/docs/assets/js/22.4d0986f1.js"><link rel="prefetch" href="/docs/assets/js/23.ef4442d1.js"><link rel="prefetch" href="/docs/assets/js/24.fc9ded7d.js"><link rel="prefetch" href="/docs/assets/js/25.6395a932.js"><link rel="prefetch" href="/docs/assets/js/26.546b003f.js"><link rel="prefetch" href="/docs/assets/js/27.7dc6a9bf.js"><link rel="prefetch" href="/docs/assets/js/28.dc65df87.js"><link rel="prefetch" href="/docs/assets/js/29.73ec1b25.js"><link rel="prefetch" href="/docs/assets/js/3.7adff3f8.js"><link rel="prefetch" href="/docs/assets/js/30.c2b64748.js"><link rel="prefetch" href="/docs/assets/js/31.387d4c22.js"><link rel="prefetch" href="/docs/assets/js/32.d27daec5.js"><link rel="prefetch" href="/docs/assets/js/33.389293f2.js"><link rel="prefetch" href="/docs/assets/js/34.dbd2f7f7.js"><link rel="prefetch" href="/docs/assets/js/35.9aafa96c.js"><link rel="prefetch" href="/docs/assets/js/36.99cfb68f.js"><link rel="prefetch" href="/docs/assets/js/37.3a0e6113.js"><link rel="prefetch" href="/docs/assets/js/38.edc054cf.js"><link rel="prefetch" href="/docs/assets/js/39.b001a02c.js"><link rel="prefetch" href="/docs/assets/js/4.beb2d725.js"><link rel="prefetch" href="/docs/assets/js/40.fea25cfe.js"><link rel="prefetch" href="/docs/assets/js/41.ff2d2877.js"><link rel="prefetch" href="/docs/assets/js/42.0a4e0e70.js"><link rel="prefetch" href="/docs/assets/js/43.0ee27d21.js"><link rel="prefetch" href="/docs/assets/js/44.92531431.js"><link rel="prefetch" href="/docs/assets/js/45.bbb58aec.js"><link rel="prefetch" href="/docs/assets/js/46.865a8d02.js"><link rel="prefetch" href="/docs/assets/js/47.ad9936a9.js"><link rel="prefetch" href="/docs/assets/js/48.7253cce3.js"><link rel="prefetch" href="/docs/assets/js/49.32f60f12.js"><link rel="prefetch" href="/docs/assets/js/5.21455a02.js"><link rel="prefetch" href="/docs/assets/js/50.f508cb17.js"><link rel="prefetch" href="/docs/assets/js/51.c747d3cf.js"><link rel="prefetch" href="/docs/assets/js/52.cc83046b.js"><link rel="prefetch" href="/docs/assets/js/53.4267b789.js"><link rel="prefetch" href="/docs/assets/js/54.30e209fe.js"><link rel="prefetch" href="/docs/assets/js/55.02328acd.js"><link rel="prefetch" href="/docs/assets/js/56.e7361bcc.js"><link rel="prefetch" href="/docs/assets/js/57.9db47c3b.js"><link rel="prefetch" href="/docs/assets/js/58.034eb327.js"><link rel="prefetch" href="/docs/assets/js/59.39e8b168.js"><link rel="prefetch" href="/docs/assets/js/6.5661729d.js"><link rel="prefetch" href="/docs/assets/js/60.8f240e29.js"><link rel="prefetch" href="/docs/assets/js/61.1d58dce0.js"><link rel="prefetch" href="/docs/assets/js/62.8bb3e4d8.js"><link rel="prefetch" href="/docs/assets/js/63.3ae893bd.js"><link rel="prefetch" href="/docs/assets/js/64.87e61536.js"><link rel="prefetch" href="/docs/assets/js/65.e5d9e034.js"><link rel="prefetch" href="/docs/assets/js/66.22ae9cc3.js"><link rel="prefetch" href="/docs/assets/js/67.1b192310.js"><link rel="prefetch" href="/docs/assets/js/68.ee037596.js"><link rel="prefetch" href="/docs/assets/js/69.262761b4.js"><link rel="prefetch" href="/docs/assets/js/7.68dc4911.js"><link rel="prefetch" href="/docs/assets/js/70.d41d58c3.js"><link rel="prefetch" href="/docs/assets/js/71.15f9761c.js"><link rel="prefetch" href="/docs/assets/js/72.fdfd4869.js"><link rel="prefetch" href="/docs/assets/js/73.27c4e77f.js"><link rel="prefetch" href="/docs/assets/js/74.d8e4ddd8.js"><link rel="prefetch" href="/docs/assets/js/75.5522f3b8.js"><link rel="prefetch" href="/docs/assets/js/76.2a029867.js"><link rel="prefetch" href="/docs/assets/js/77.b9f6e3b0.js"><link rel="prefetch" href="/docs/assets/js/78.6279e15a.js"><link rel="prefetch" href="/docs/assets/js/79.ffd7ce8d.js"><link rel="prefetch" href="/docs/assets/js/8.becdf3ae.js"><link rel="prefetch" href="/docs/assets/js/80.22c66654.js"><link rel="prefetch" href="/docs/assets/js/81.c275e81d.js"><link rel="prefetch" href="/docs/assets/js/82.9396d3c8.js"><link rel="prefetch" href="/docs/assets/js/83.c5715a22.js"><link rel="prefetch" href="/docs/assets/js/84.b9e59a61.js"><link rel="prefetch" href="/docs/assets/js/85.91de1489.js"><link rel="prefetch" href="/docs/assets/js/86.7136378c.js"><link rel="prefetch" href="/docs/assets/js/87.b7c5d1f9.js"><link rel="prefetch" href="/docs/assets/js/88.b0115e14.js"><link rel="prefetch" href="/docs/assets/js/89.a934e4a3.js"><link rel="prefetch" href="/docs/assets/js/9.912b2518.js"><link rel="prefetch" href="/docs/assets/js/91.f945edaf.js"><link rel="prefetch" href="/docs/assets/js/92.75e7185e.js"><link rel="prefetch" href="/docs/assets/js/93.4993c604.js"><link rel="prefetch" href="/docs/assets/js/94.dfe06d0c.js"><link rel="prefetch" href="/docs/assets/js/95.029f76b9.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.00f9c8c7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/assets/img/logo.png" alt="嘉炳的笔记" class="logo"> <span class="site-name can-hide">嘉炳的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/guide.html" class="nav-link">
+  先导
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/计算机/网络协议/HTTP协议原理+实践.html" class="nav-link">
+  网络协议
+</a></li><li class="dropdown-item"><!----> <a href="/docs/计算机/数据结构与算法/" class="nav-link">
+  数据结构与算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/前端/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/react/" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/后端/Node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/项目/VueWebpack/" class="nav-link">
+  JTodo
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/工具/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/git/" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/about.html" class="nav-link">
+  关于我的
+</a></li><li class="dropdown-item"><h4>
+          面试合集
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/面试/H5C3/" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/试题合集/" class="nav-link">
+  试题合集
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/杂项/" class="nav-link">
+  杂项
+</a></li></ul></li><li class="dropdown-item"><h4>
+          文章收藏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/文章收藏/" class="nav-link">
+  文章收藏
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/jiabing-china" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/guide.html" class="nav-link">
+  先导
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/计算机/网络协议/HTTP协议原理+实践.html" class="nav-link">
+  网络协议
+</a></li><li class="dropdown-item"><!----> <a href="/docs/计算机/数据结构与算法/" class="nav-link">
+  数据结构与算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/前端/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/react/" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/后端/Node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/项目/VueWebpack/" class="nav-link">
+  JTodo
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/工具/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/git/" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/about.html" class="nav-link">
+  关于我的
+</a></li><li class="dropdown-item"><h4>
+          面试合集
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/面试/H5C3/" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/试题合集/" class="nav-link">
+  试题合集
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/杂项/" class="nav-link">
+  杂项
+</a></li></ul></li><li class="dropdown-item"><h4>
+          文章收藏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/文章收藏/" class="nav-link">
+  文章收藏
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/jiabing-china" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>项目</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/项目/01自定义工具库.html" class="sidebar-link">自定义工具库(未完待续ing~)</a></li><li><a href="/docs/项目/BigNews.html" class="sidebar-link">BigNews(烂尾中)</a></li><li><a href="/docs/项目/React商品管理系统.html" class="sidebar-link">React商品管理系统</a></li><li><a href="/docs/项目/VueSSR.html" class="active sidebar-link">vuessr(努力啃)</a></li><li><a href="/docs/项目/VueSupermall.html" class="sidebar-link">VueSupermall（完）</a></li><li><a href="/docs/项目/VueWebpack.html" class="sidebar-link">vue+webpack打造todo应用（完）</a></li><li><a href="/docs/项目/Vue电商系统.html" class="sidebar-link">电商系统(算是完了)</a></li><li><a href="/docs/项目/Vue电影.html" class="sidebar-link">Vue 电影（完）</a></li><li><a href="/docs/项目/vue点餐系统.html" class="sidebar-link">vue 点餐系统</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuessr"><a href="#vuessr" class="header-anchor">#</a> vuessr</h1> <h2 id="服务端渲染"><a href="#服务端渲染" class="header-anchor">#</a> 服务端渲染</h2> <h3 id="_1-开发时服务端渲染的配置和原理"><a href="#_1-开发时服务端渲染的配置和原理" class="header-anchor">#</a> 1 开发时服务端渲染的配置和原理</h3> <img src="/docs/项目/服务端渲染.png"> <h3 id="_2-使用-koa-实现-node-server"><a href="#_2-使用-koa-实现-node-server" class="header-anchor">#</a> 2 使用 koa 实现 node server</h3> <h3 id="_3-服务端渲染的-entry-配置"><a href="#_3-服务端渲染的-entry-配置" class="header-anchor">#</a> 3 服务端渲染的 entry 配置</h3> <h3 id="_4-开发时服务端渲染静态资源路径处理"><a href="#_4-开发时服务端渲染静态资源路径处理" class="header-anchor">#</a> 4 开发时服务端渲染静态资源路径处理</h3> <h3 id="_5-使用-vue-meta-处理元信息"><a href="#_5-使用-vue-meta-处理元信息" class="header-anchor">#</a> 5 使用 vue-meta 处理元信息</h3> <h3 id="_6-生产环境服务端渲染"><a href="#_6-生产环境服务端渲染" class="header-anchor">#</a> 6 生产环境服务端渲染</h3> <h2 id="vue-核心知识"><a href="#vue-核心知识" class="header-anchor">#</a> vue 核心知识</h2> <h3 id="_1-小准备"><a href="#_1-小准备" class="header-anchor">#</a> 1.小准备</h3> <p>runtime-only 的代码无法编译 Vue 对象里面的 template</p> <p>应该使用 vue.esm.js,并且起别名，方便 import vue from &quot;vue&quot;</p> <div class="language-javscript extra-class"><pre class="language-text"><code> config.resolve = {
+        alias: {
+          'vue': path.join(__dirname, '../node_modules/vue/dist/vue.esm.js')
+        }
+      }
+</code></pre></div><p>新建一个 templa.html 的模板</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      template<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'template.html'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</code></pre></div><h3 id="_2-vue-的实例"><a href="#_2-vue-的实例" class="header-anchor">#</a> 2.vue 的实例</h3> <p>new Vue 上面的属性</p> <p>$data</p> <p>$props</p> <p>$el</p> <p>$options：上面的 render 方法，只能在渲染后再发起作用，(这里不能修改 data 的数据，内部做过修改)</p> <p>$root：vue 的实例，根实例，就是 new 的对象</p> <p>$children：子组件</p> <p>$slots$scopedSlots：插槽</p> <p>$refs： 定位模板的节点</p> <p>$isServer：服务端渲染用到</p> <p>new Vue 上面的方法</p> <p>$watch ：监听(这个和options里面写是一样的，写在options里面，可以在组件销毁的时候顺带自动销毁，当然也可以使用实例对象.$watch 的返回方法来销毁)</p> <p>$on： 事件监听</p> <p>$emit：触发事件 和上面的$on 必须监听同一个 Vue 对象，才能触发</p> <p>$once：只监听一次</p> <p>$forceUpdate： 强制渲染，这个很有问题，性能低。</p> <p>$set：弥补,给对象添加属性</p> <p>$delete：删除</p> <p>$destory：主动销毁，不常用</p> <p>$nextTick({})：事件队列，异步渲染。</p> <h3 id="_3-vue-组件-对象-的生命周期"><a href="#_3-vue-组件-对象-的生命周期" class="header-anchor">#</a> 3.vue 组件（对象）的生命周期</h3> <p>beforeCreate(){}==el 为 undefined</p> <p>created(){}==el 为 undefined</p> <p>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =服务器能调用</p> <p>beforeMount(){}==el 为模板</p> <blockquote><p>这里执行 render 的方法</p> <p>renderError 开发环境可用</p> <p>errorCaptured 向上冒泡，正式环境可用</p></blockquote> <p>mounted(){} ==el 被替换</p> <p>挂载入的时候，没有 el 的属性可以通过$mount()</p> <p>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =服务器调用不了，这个和 dom 有关</p> <p>beforeUpdate(){}</p> <p>updated(){}</p> <p>数据更新、覆盖的时候</p> <p>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</p> <p>activated(){}、</p> <p>deactivated(){}</p> <p>组件的 keepalive 中触发</p> <p>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</p> <p>beforeDestory(){}拿不到了 el</p> <p>destoryed(){}拿不到了 el</p> <p>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</p> <h3 id="_4-vue-的数据绑定"><a href="#_4-vue-的数据绑定" class="header-anchor">#</a> 4.vue 的数据绑定</h3> <p>字符串显示、可以做一些简单计算，或者是一行语句有返回结果的运算、支持调用原生 js 的方法，但是不支持自定义的全局对象，可以使用 window 上的对象</p> <h3 id="_5-computed-和-watch-的使用场景和方法"><a href="#_5-computed-和-watch-的使用场景和方法" class="header-anchor">#</a> 5.computed 和 watch 的使用场景和方法</h3> <p>computed:计算属性，实际是调用 get 方法，这一块有缓存，降低消耗。与 methods 不同，它不需要在每次页面渲染的时候就执行，它依赖的值改变，它才计算渲染。如果你的值需要大量计算才得到，那么缓存的意义就很大。</p> <blockquote><p>尽量不要不要用 computed 的 set 方法，逻辑复杂，减少计算重复</p></blockquote> <p>watch:监听数据，初始绑定不执行。但是可以设置 immediate：true 来调用立即执行的 handler()方法，deep：true，深入观察，遍历对象，发生改变就能监测到，这个我觉得应该和 vue2.X 的绑定原理有关系，Object.defineProperty()的缺陷，只有修改一个对象的现有属性，才返回此对象。这边也可以监测字符串，这样监测的就不是对象了，也不用加 deep;true 来深入观察。</p> <h3 id="_6-vue-的原生指令"><a href="#_6-vue-的原生指令" class="header-anchor">#</a> 6.vue 的原生指令</h3> <div class="language- extra-class"><pre><code>v-text
+v-html
+v-show display
+v-if 不存在dom，动态增删节点
+v-for 加:key,渲染节点复用
+v-bind
+v-on
+v-class
+v-style
+v-model 默认用在input
+v-pre
+v-cloak
+v-once
+</code></pre></div><h3 id="_7-vue-的组件定义"><a href="#_7-vue-的组件定义" class="header-anchor">#</a> 7.vue 的组件定义</h3> <div class="language-js extra-class"><pre class="language-js"><code>CompOne
+<span class="token operator">&lt;</span>comp<span class="token operator">-</span>one<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>comp<span class="token operator">-</span>one<span class="token operator">&gt;</span>
+<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+        <span class="token comment">//局部对象</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+props：<span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-vue-的组件继承"><a href="#_8-vue-的组件继承" class="header-anchor">#</a> 8.vue 的组件继承</h3> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+特例<span class="token punctuation">;</span>
+</code></pre></div><p>先用父组件，在用子组件</p> <p>可以用$parent的属性改变父组，$parent 是可以改变的(必须在 new 的时候)，不推荐，脑子会乱，循环渲染的问题。</p> <h3 id="_9-vue-的组件自定义双向绑定"><a href="#_9-vue-的组件自定义双向绑定" class="header-anchor">#</a> 9.vue 的组件自定义双向绑定</h3> <p>子组件：props 承接父组件，改变值的时候，发射方法到父组件，父组件用 v-model 绑定 value 的值。</p> <h3 id="_10-vue-的组件高级属性"><a href="#_10-vue-的组件高级属性" class="header-anchor">#</a> 10.vue 的组件高级属性</h3> <p>匿名插槽</p> <p>具名插槽</p> <p>作用域插槽
+(slot-scope 指令)</p> <p>少用$refs 修改 vue 的实例</p> <p>provide(){return } 默认不提供双向绑定的属性，需要自定义</p> <div class="language-js extra-class"><pre class="language-js"><code>Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+  enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>inject:[]</p> <p>尽量别用，vue3 用代理了</p> <h3 id="_11vue-的组件-render-function"><a href="#_11vue-的组件-render-function" class="header-anchor">#</a> 11vue 的组件 render function</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//createElement虚拟dom</span>
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">createElement</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span>dom<span class="token punctuation">,</span><span class="token punctuation">{</span>
+     <span class="token comment">//属性赋值</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="vue-router-和-vuex"><a href="#vue-router-和-vuex" class="header-anchor">#</a> Vue-Router 和 Vuex</h2> <h3 id="vue-router-集成"><a href="#vue-router-集成" class="header-anchor">#</a> Vue-router 集成</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token function">defult</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        routes
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为了服务端渲染，防止内存溢出。</p> <h3 id="vue-router-配置"><a href="#vue-router-配置" class="header-anchor">#</a> Vue-router 配置</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+   path<span class="token operator">:</span><span class="token string">'/'</span><span class="token punctuation">,</span>
+   redirect<span class="token operator">:</span><span class="token string">'/app'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token function">defult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        routes<span class="token punctuation">,</span>
+        mode<span class="token operator">:</span><span class="token string">'history'</span><span class="token punctuation">,</span>
+        base<span class="token operator">:</span><span class="token string">''</span><span class="token punctuation">,</span>
+        linkActiveClsaa<span class="token operator">:</span><span class="token string">''</span><span class="token punctuation">,</span>
+        linkExactActiveClass<span class="token operator">:</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token comment">//子集</span>
+        <span class="token function">scrollBehavior</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span><span class="token keyword">from</span><span class="token punctuation">,</span>savedPosition</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>savedPosition<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> savedPosition
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token punctuation">{</span>x<span class="token operator">:</span><span class="token number">0</span> <span class="token punctuation">,</span>y<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token comment">//保存滚动位置</span>
+        fallback<span class="token operator">:</span>ture<span class="token punctuation">,</span><span class="token comment">//转hash模式跳转，自动处理</span>
+        <span class="token function">parseQuery</span><span class="token punctuation">(</span><span class="token parameter">query</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">stringifyQuery</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>#不被 seo 解析</p> <h3 id="vue-router-路由参数传递"><a href="#vue-router-路由参数传递" class="header-anchor">#</a> Vue-router 路由参数传递</h3> <p>name 属性</p> <p>meta</p> <p>children 数组</p> <p>transition 路由显示隐藏的效果</p> <p>：变量 $route.params{} query</p> <p>props:true 推荐这么做</p> <h3 id="vue-router-导航守卫"><a href="#vue-router-导航守卫" class="header-anchor">#</a> Vue-router 导航守卫</h3> <p>全局导航守卫</p> <p>router.beforEach((to,from,next)=&gt;{})</p> <p>router.beforResolve()</p> <p>router.afterEach()</p> <p>路由配置的钩子 beforeEnter(){}</p> <p>组件内部的钩子</p> <p>beforeRouteEnter(){}</p> <p>beforeRouteUpdate(){}</p> <p>beforeRouteLeave(){}</p> <h3 id="vuex-集成"><a href="#vuex-集成" class="header-anchor">#</a> VueX 集成</h3> <p>new store=&gt;这个不就是脚手架生成的吗？</p> <h3 id="vuexstate-和-getters"><a href="#vuexstate-和-getters" class="header-anchor">#</a> VueXstate 和 getters</h3> <p>默认的 state 抽离出来</p> <p>getters 相当于组件的 computed，数据的预处理</p> <p>问题：,,,在 babel 的 env 环境中可能不支持，安装 babel-presetstag-1</p> <h3 id="vuexmutation-和-action"><a href="#vuexmutation-和-action" class="header-anchor">#</a> VueXmutation 和 action</h3> <p>store.commit 传入额外的参数，即 mutation 的 载荷(payload)</p> <p>开发环境设置 strict 为 true，严禁从外部修改 store 的状态</p> <h3 id="vuex-模块"><a href="#vuex-模块" class="header-anchor">#</a> VueX 模块</h3> <p>Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割</p> <p>namespaced: true</p> <p>root: true</p> <p>模块热重载</p> <h3 id="vuex-其他-api-和配置"><a href="#vuex-其他-api-和配置" class="header-anchor">#</a> VueX 其他 api 和配置</h3> <p>解绑、watch、subscribe、subscribeAction，自定义插件
+<img src="/docs/项目/vuex.png"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/项目/React商品管理系统.html" class="prev">
+        React商品管理系统
+      </a></span> <span class="next"><a href="/docs/项目/VueSupermall.html">
+        VueSupermall（完）
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/docs/assets/js/app.89439026.js" defer></script><script src="/docs/assets/js/2.a3a8f7c5.js" defer></script><script src="/docs/assets/js/90.b2fd718c.js" defer></script>
+  </body>
+</html>

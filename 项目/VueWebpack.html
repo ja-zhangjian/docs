@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue+webpack打造todo应用（完） | 嘉炳的笔记</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/docs/favicon.ico">
+    <meta name="description" content="仅做生活学习的记录">
+    <meta rel="author" content="Jiabing">
+    <meta rel="keywords" content="Jiabing,嘉炳,夹饼,生活,学习，记录,前端">
+    <link rel="preload" href="/docs/assets/css/0.styles.00f9c8c7.css" as="style"><link rel="preload" href="/docs/assets/js/app.89439026.js" as="script"><link rel="preload" href="/docs/assets/js/2.a3a8f7c5.js" as="script"><link rel="preload" href="/docs/assets/js/92.75e7185e.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.5e5765ce.js"><link rel="prefetch" href="/docs/assets/js/11.b26ed42c.js"><link rel="prefetch" href="/docs/assets/js/12.8814a90a.js"><link rel="prefetch" href="/docs/assets/js/13.478a751a.js"><link rel="prefetch" href="/docs/assets/js/14.7c6ce0b2.js"><link rel="prefetch" href="/docs/assets/js/15.3d50a897.js"><link rel="prefetch" href="/docs/assets/js/16.c26e83da.js"><link rel="prefetch" href="/docs/assets/js/17.2dd9d11a.js"><link rel="prefetch" href="/docs/assets/js/18.c9c57158.js"><link rel="prefetch" href="/docs/assets/js/19.0a1f39fa.js"><link rel="prefetch" href="/docs/assets/js/20.3ccef31e.js"><link rel="prefetch" href="/docs/assets/js/21.69631242.js"><link rel="prefetch" href="/docs/assets/js/22.4d0986f1.js"><link rel="prefetch" href="/docs/assets/js/23.ef4442d1.js"><link rel="prefetch" href="/docs/assets/js/24.fc9ded7d.js"><link rel="prefetch" href="/docs/assets/js/25.6395a932.js"><link rel="prefetch" href="/docs/assets/js/26.546b003f.js"><link rel="prefetch" href="/docs/assets/js/27.7dc6a9bf.js"><link rel="prefetch" href="/docs/assets/js/28.dc65df87.js"><link rel="prefetch" href="/docs/assets/js/29.73ec1b25.js"><link rel="prefetch" href="/docs/assets/js/3.7adff3f8.js"><link rel="prefetch" href="/docs/assets/js/30.c2b64748.js"><link rel="prefetch" href="/docs/assets/js/31.387d4c22.js"><link rel="prefetch" href="/docs/assets/js/32.d27daec5.js"><link rel="prefetch" href="/docs/assets/js/33.389293f2.js"><link rel="prefetch" href="/docs/assets/js/34.dbd2f7f7.js"><link rel="prefetch" href="/docs/assets/js/35.9aafa96c.js"><link rel="prefetch" href="/docs/assets/js/36.99cfb68f.js"><link rel="prefetch" href="/docs/assets/js/37.3a0e6113.js"><link rel="prefetch" href="/docs/assets/js/38.edc054cf.js"><link rel="prefetch" href="/docs/assets/js/39.b001a02c.js"><link rel="prefetch" href="/docs/assets/js/4.beb2d725.js"><link rel="prefetch" href="/docs/assets/js/40.fea25cfe.js"><link rel="prefetch" href="/docs/assets/js/41.ff2d2877.js"><link rel="prefetch" href="/docs/assets/js/42.0a4e0e70.js"><link rel="prefetch" href="/docs/assets/js/43.0ee27d21.js"><link rel="prefetch" href="/docs/assets/js/44.92531431.js"><link rel="prefetch" href="/docs/assets/js/45.bbb58aec.js"><link rel="prefetch" href="/docs/assets/js/46.865a8d02.js"><link rel="prefetch" href="/docs/assets/js/47.ad9936a9.js"><link rel="prefetch" href="/docs/assets/js/48.7253cce3.js"><link rel="prefetch" href="/docs/assets/js/49.32f60f12.js"><link rel="prefetch" href="/docs/assets/js/5.21455a02.js"><link rel="prefetch" href="/docs/assets/js/50.f508cb17.js"><link rel="prefetch" href="/docs/assets/js/51.c747d3cf.js"><link rel="prefetch" href="/docs/assets/js/52.cc83046b.js"><link rel="prefetch" href="/docs/assets/js/53.4267b789.js"><link rel="prefetch" href="/docs/assets/js/54.30e209fe.js"><link rel="prefetch" href="/docs/assets/js/55.02328acd.js"><link rel="prefetch" href="/docs/assets/js/56.e7361bcc.js"><link rel="prefetch" href="/docs/assets/js/57.9db47c3b.js"><link rel="prefetch" href="/docs/assets/js/58.034eb327.js"><link rel="prefetch" href="/docs/assets/js/59.39e8b168.js"><link rel="prefetch" href="/docs/assets/js/6.5661729d.js"><link rel="prefetch" href="/docs/assets/js/60.8f240e29.js"><link rel="prefetch" href="/docs/assets/js/61.1d58dce0.js"><link rel="prefetch" href="/docs/assets/js/62.8bb3e4d8.js"><link rel="prefetch" href="/docs/assets/js/63.3ae893bd.js"><link rel="prefetch" href="/docs/assets/js/64.87e61536.js"><link rel="prefetch" href="/docs/assets/js/65.e5d9e034.js"><link rel="prefetch" href="/docs/assets/js/66.22ae9cc3.js"><link rel="prefetch" href="/docs/assets/js/67.1b192310.js"><link rel="prefetch" href="/docs/assets/js/68.ee037596.js"><link rel="prefetch" href="/docs/assets/js/69.262761b4.js"><link rel="prefetch" href="/docs/assets/js/7.68dc4911.js"><link rel="prefetch" href="/docs/assets/js/70.d41d58c3.js"><link rel="prefetch" href="/docs/assets/js/71.15f9761c.js"><link rel="prefetch" href="/docs/assets/js/72.fdfd4869.js"><link rel="prefetch" href="/docs/assets/js/73.27c4e77f.js"><link rel="prefetch" href="/docs/assets/js/74.d8e4ddd8.js"><link rel="prefetch" href="/docs/assets/js/75.5522f3b8.js"><link rel="prefetch" href="/docs/assets/js/76.2a029867.js"><link rel="prefetch" href="/docs/assets/js/77.b9f6e3b0.js"><link rel="prefetch" href="/docs/assets/js/78.6279e15a.js"><link rel="prefetch" href="/docs/assets/js/79.ffd7ce8d.js"><link rel="prefetch" href="/docs/assets/js/8.becdf3ae.js"><link rel="prefetch" href="/docs/assets/js/80.22c66654.js"><link rel="prefetch" href="/docs/assets/js/81.c275e81d.js"><link rel="prefetch" href="/docs/assets/js/82.9396d3c8.js"><link rel="prefetch" href="/docs/assets/js/83.c5715a22.js"><link rel="prefetch" href="/docs/assets/js/84.b9e59a61.js"><link rel="prefetch" href="/docs/assets/js/85.91de1489.js"><link rel="prefetch" href="/docs/assets/js/86.7136378c.js"><link rel="prefetch" href="/docs/assets/js/87.b7c5d1f9.js"><link rel="prefetch" href="/docs/assets/js/88.b0115e14.js"><link rel="prefetch" href="/docs/assets/js/89.a934e4a3.js"><link rel="prefetch" href="/docs/assets/js/9.912b2518.js"><link rel="prefetch" href="/docs/assets/js/90.b2fd718c.js"><link rel="prefetch" href="/docs/assets/js/91.f945edaf.js"><link rel="prefetch" href="/docs/assets/js/93.4993c604.js"><link rel="prefetch" href="/docs/assets/js/94.dfe06d0c.js"><link rel="prefetch" href="/docs/assets/js/95.029f76b9.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.00f9c8c7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/assets/img/logo.png" alt="嘉炳的笔记" class="logo"> <span class="site-name can-hide">嘉炳的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/guide.html" class="nav-link">
+  先导
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/计算机/网络协议/HTTP协议原理+实践.html" class="nav-link">
+  网络协议
+</a></li><li class="dropdown-item"><!----> <a href="/docs/计算机/数据结构与算法/" class="nav-link">
+  数据结构与算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/前端/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/react/" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/后端/Node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/项目/VueWebpack/" class="nav-link">
+  JTodo
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/工具/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/git/" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/about.html" class="nav-link">
+  关于我的
+</a></li><li class="dropdown-item"><h4>
+          面试合集
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/面试/H5C3/" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/试题合集/" class="nav-link">
+  试题合集
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/杂项/" class="nav-link">
+  杂项
+</a></li></ul></li><li class="dropdown-item"><h4>
+          文章收藏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/文章收藏/" class="nav-link">
+  文章收藏
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/jiabing-china" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/guide.html" class="nav-link">
+  先导
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">计算机</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/计算机/网络协议/HTTP协议原理+实践.html" class="nav-link">
+  网络协议
+</a></li><li class="dropdown-item"><!----> <a href="/docs/计算机/数据结构与算法/" class="nav-link">
+  数据结构与算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/前端/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/前端/react/" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/后端/Node/" class="nav-link">
+  Node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/项目/VueWebpack/" class="nav-link">
+  JTodo
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/工具/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/docs/工具/git/" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/about.html" class="nav-link">
+  关于我的
+</a></li><li class="dropdown-item"><h4>
+          面试合集
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/面试/H5C3/" class="nav-link">
+  H5C3
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/试题合集/" class="nav-link">
+  试题合集
+</a></li><li class="dropdown-subitem"><a href="/docs/面试/杂项/" class="nav-link">
+  杂项
+</a></li></ul></li><li class="dropdown-item"><h4>
+          文章收藏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/文章收藏/" class="nav-link">
+  文章收藏
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/jiabing-china" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>项目</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/项目/01自定义工具库.html" class="sidebar-link">自定义工具库(未完待续ing~)</a></li><li><a href="/docs/项目/BigNews.html" class="sidebar-link">BigNews(烂尾中)</a></li><li><a href="/docs/项目/React商品管理系统.html" class="sidebar-link">React商品管理系统</a></li><li><a href="/docs/项目/VueSSR.html" class="sidebar-link">vuessr(努力啃)</a></li><li><a href="/docs/项目/VueSupermall.html" class="sidebar-link">VueSupermall（完）</a></li><li><a href="/docs/项目/VueWebpack.html" class="active sidebar-link">vue+webpack打造todo应用（完）</a></li><li><a href="/docs/项目/Vue电商系统.html" class="sidebar-link">电商系统(算是完了)</a></li><li><a href="/docs/项目/Vue电影.html" class="sidebar-link">Vue 电影（完）</a></li><li><a href="/docs/项目/vue点餐系统.html" class="sidebar-link">vue 点餐系统</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-webpack-打造-todo-应用"><a href="#vue-webpack-打造-todo-应用" class="header-anchor">#</a> vue+webpack 打造 todo 应用</h1> <blockquote><p>（PS：不含 vue 的脚手架，webpack 版本是 4. X，vue2. X）写在前面，我决定自己来写这个小 demo，因为对着别人的东西做的时候，发生了各种问题，非常痛苦，当然，与工作不一样，我不需要赶时间，所以，我可以慢慢做，同时用各种方式。</p></blockquote> <p>新建文件 vuetodo</p> <p>文件目录</p> <div class="language- extra-class"><pre class="language-text"><code>Jtodo
+├─ dist
+│  ├─ fonts
+│  │  ├─ checked.svg
+│  │  └─ unChecked.svg
+│  ├─ bg.jpg
+│  ├─ index.html
+│  ├─ main.3efc9cf4.js
+│  ├─ main.e647d16e.css
+│  ├─ manifest.main.1ee16c22.js
+│  └─ vendors.2c31e1e9.js
+├─ src
+│  ├─ assets
+│  │  ├─ images
+│  │  │  ├─ bg.jpg
+│  │  │  ├─ checked.svg
+│  │  │  └─ unChecked.svg
+│  │  └─ styles
+│  │     ├─ footer.styl
+│  │     ├─ global.styl
+│  │     ├─ style.styl
+│  │     └─ test.css
+│  ├─ todo
+│  │  ├─ footer.jsx
+│  │  ├─ header.vue
+│  │  ├─ item.vue
+│  │  ├─ tabs.vue
+│  │  └─ todo.vue
+│  ├─ app.vue
+│  └─ index.js
+├─ .babelrc
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ README.md
+└─ webpack.config.js
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> init -y
+<span class="token function">npm</span> i webpack webpack-cli -D
+<span class="token function">npm</span> i vue vue-loader
+<span class="token function">npm</span> i css-loader vue-template-compiler
+<span class="token function">npm</span> i postcss postcss-loader autoprefixer
+<span class="token function">npm</span> i -D babel-loader @babel/core @babel/preset-env
+<span class="token function">npm</span> i babel-plugin-transform-vue-jsx -D
+<span class="token function">npm</span> i babel-helper-vue-jsx-merge-props babel-plugin-syntax-jsx -D
+<span class="token function">npm</span> i babel-preset-env
+。。。。。。。
+</code></pre></div><p>这边就不全写了，package.json 里面有详细的，npm install 一下就行了，需要注意以下几个点</p> <p>1：vue-loader 需要 css-loader vue-template-compiler，css-loader 又需要 style-loader</p> <p>2：Vue Loader 的配置和其它的 loader 不太一样。除了通过一条规则将 vue-loader 应用到所有扩展名为 .vue 的文件</p> <p>上之外，请确保在你的 webpack 配置中添加 Vue Loader 的插件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> VueLoaderPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;vue-loader/lib/plugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// ... 其它规则</span>
+            <span class="token punctuation">{</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.vue$/</span><span class="token punctuation">,</span>
+                loader<span class="token operator">:</span> <span class="token string">&quot;vue-loader&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 请确保引入这个插件！</span>
+        <span class="token keyword">new</span> <span class="token class-name">VueLoaderPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>这个插件是必须的！ 它的职责是将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块。例如，如果你有一条匹配 /.js$/ 的规则，那么它会应用到 .vue 文件里的 &lt;script&gt; 块。</p> <p>一个更完整的 webpack 配置示例看起来像这样：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> VueLoaderPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;vue-loader/lib/plugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">,</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.vue$/</span><span class="token punctuation">,</span>
+                loader<span class="token operator">:</span> <span class="token string">&quot;vue-loader&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// 它会应用到普通的 `.js` 文件</span>
+            <span class="token comment">// 以及 `.vue` 文件中的 `&lt;script&gt;` 块</span>
+            <span class="token punctuation">{</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+                loader<span class="token operator">:</span> <span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// 它会应用到普通的 `.css` 文件</span>
+            <span class="token comment">// 以及 `.vue` 文件中的 `&lt;style&gt;` 块</span>
+            <span class="token punctuation">{</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span>
+                use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;vue-style-loader&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 请确保引入这个插件来施展魔法</span>
+        <span class="token keyword">new</span> <span class="token class-name">VueLoaderPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>实际上我测试也是有问题的，下面说一下</p> <p>style-loader 是作为顶层的 loader 来渲染到 dom 上的，这也就意味着，尽量在处理 css 或者预编译的 loader 的顶层上加上 style-loader。为此我们看一下 webpack 的英文官网，一定要是英文！！！</p> <p>关于 style-loader 的：</p> <p>Inject CSS into the DOM(css 注入到 DOM 中)</p> <p>To begin, you'll need to install style-loader:（导入，这要是看不懂，亲，建议这边回家种红薯）</p> <p>It's recommended to combine style-loader with the css-loader（推荐这两玩意结合起来用，两粒一起嚼起来才最佳</p> <p>）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            test<span class="token operator">:</span> <span class="token regex">/\.css$/i</span><span class="token punctuation">,</span>
+            use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>你看，webpack，处理 css-loader 就会加上 style-loader，vue-loader 处理 .vue 文件中内部的&lt;style&gt;样式块，只在加了 vue-style-loader，可我在测试中.vue 中内部样式就是不生效，额外加了 style-loader 药到病除，下面黑魔法来了，等我 demo 做完了，我就不信邪，我又去掉了 style-loader，好像有可以显示样式了，说实话，我本是无神论者，现在我相信了，科学的尽头就是玄学。也可能是误操作，菜才能解释这一切。</p> <blockquote><p>然后简单说一下剩下的 loader, 可能会漏，漏掉的就去找英文文档，英文的，就是那种看着难受的，看懂了很爽的。</p></blockquote> <p>babel=》这个需要三个，loader、core、env（加载器，核心，环境），可能处理 jsx 文件还需要相关的插件，注意@和没@的区别，我看好像版本的问题，具体还是要查，webpack 的 3 和 4 我感觉属于大版本更新，废弃和启用的差别大。</p> <p>postcss-loader=》搭配 postcss，他们的关系我觉得就是 vue 和 vue-loader 的关系。这个用来处理 css，比如加浏览器前缀，利用 hash 值来达到长缓存。</p> <p>处理图片的比如 url-loader 和 file-loader 的就不说了，还有 svg 的</p> <blockquote><p>插件：</p></blockquote> <p>这个在 demo 用的不多，我就举几个我用到的</p> <p>clean-webpack-plugin=》这个是好东西，打包的时候，清除上一次 dist 里面的文件</p> <p>html-webpack-plugin=》生成一个 html 当根</p> <p>mini-css-extract-plugin=》webpack4. X，需要这个插件来提取 css 样式的。</p> <blockquote><p>webpack 里面的</p></blockquote> <p>config.optimization.splitChunks 这个玩意可以拆包，为了稳定性，我们对于第三方类库几乎不更新，为了长缓存，我们需要把业务代码与第三方类库的代码剥离开来。</p> <p>hash，入口文件，整个文件的 hash，一旦有个文件改变，值也变，没缓存意义</p> <p>chunkhash，统一模块的 hash 值，同上</p> <p>contenthash，文件内容一样，hash 值不一样</p> <blockquote><p>最后写 README, md 的时候，我在 ie 下跑代码的时候，发现不能运行，我傻了，我忘了 babel 也要配置，不想配置了，正常人谁会用 ie？而且，作为 webpack 核心功能之一，这转移很完善，坑不多~吧~吧~吧~</p></blockquote> <blockquote><p>总结：没啥业务，算是过了一遍 vue 基本语法，模板，事件绑定，父子组件通信的 props 和$emit，手撕了 webpack 最最最基础的东西，基本走了一遍上线的流程。（最简单的那种）现在前端工程化，模块化，我接触有点晚了，慢慢来吧，更新过快是坏事，也是好事。听说 vite 有丶好用</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/项目/VueSupermall.html" class="prev">
+        VueSupermall（完）
+      </a></span> <span class="next"><a href="/docs/项目/Vue电商系统.html">
+        电商系统(算是完了)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/docs/assets/js/app.89439026.js" defer></script><script src="/docs/assets/js/2.a3a8f7c5.js" defer></script><script src="/docs/assets/js/92.75e7185e.js" defer></script>
+  </body>
+</html>
