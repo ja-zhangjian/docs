@@ -117,6 +117,10 @@ module.exports = {
             text: "Vue",
             link: "/前端/vue/"
           },
+          {
+            text: "React",
+            link: "/前端/react/"
+          },
         ],
       },
       //一级分组

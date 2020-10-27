@@ -1,5 +1,5 @@
 ---
-title: BigNews
+title: BigNews(烂尾中)
 # autoPrev: README
 # autoNext: README
 ---
@@ -11,14 +11,14 @@ title: BigNews
 > 1.  form 的表单注册 submit 事件
 
 ```javascript
-$(dom).on("submit", function (e) {
+$(dom).on("submit", function(e) {
   //阻止表单的默认提交事件
   e.preventDefault();
   $.ajax({
     type: "",
     url: "",
     data: $(this).serialize(),
-    success: function (res) {
+    success: function(res) {
       console.log(res);
     },
   });
@@ -68,7 +68,7 @@ localStorage.removeItem(key)
 ```js
 //这个放到应用的jq.js里面，在调用ajax的时候，会在调用之前执行
 $.ajaxSetup({
-  beforeSend: function (xhr) {
+  beforeSend: function(xhr) {
     xhr.setRequestHeader("Authorization", localStorage.getItem("token"));
   },
 });
@@ -78,10 +78,10 @@ $.ajaxSetup({
 
 ```js
 $.ajaxSetup({
-  beforeSend: function (xhr) {
+  beforeSend: function(xhr) {
     xhr.setRequestHeader("Authorization", localStorage.getItem("token"));
   },
-  error: function (xhr, status, err) {
+  error: function(xhr, status, err) {
     // console.log(xhr); // 异步对象
     // console.log(status); // 错误信息
     // console.log(err); // 错误提示内容
@@ -106,13 +106,18 @@ window.localStorage.removeItem("token");
 
 ```js
 //点击的元素添加active，其兄弟元素是div类型的去除active
-$(this).addClass("active").siblings("div").removeClass("active");
+$(this)
+  .addClass("active")
+  .siblings("div")
+  .removeClass("active");
 
 //类似于卷帘门的效果，display:none/block
 $(".menu .level02").slideToggle();
 
 //单个元素添加移除属性
-$(this).find("b").toggleClass("rotate0");
+$(this)
+  .find("b")
+  .toggleClass("rotate0");
 
 //触发器事件，也可以直接添加属性
 $(".menu .level02 li:eq(0)").click();
@@ -123,7 +128,7 @@ $(".menu .level02 li:eq(0)").click();
 
 ```js
 /* 沙箱模式 */
-(function (w) {
+(function(w) {
   var baseURL = "http://localhost:8080/api/v1";
   var BigNew = {
     baseURL: baseURL, //基地址

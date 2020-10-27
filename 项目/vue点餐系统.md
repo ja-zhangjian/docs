@@ -1,5 +1,205 @@
 # vue 点餐系统
 
+## 前置铺垫
+
+### 1. new Vue 的三种
+
+```js
+new Vue({
+  render: (h) => h(App),
+}).$mount("#app");
+
+new Vue({
+  el:'#app'
+  render: (h) => h(App),
+})
+
+new Vue({
+  el:'#app'
+  components:{App},
+  template:'<App />'
+```
+
+后两种会报错，缺少运行时编译的包，我记得是 100kb 来着，这是脚手架搭建的，要么就是加上\$mount,要么就是新建 vue.conif.js 加上配置。这个肯定用第一个，官方都是这么来的。少 100k 呢。
+
+```js
+module.exports = {
+  runtimeCompiler: true,
+};
+```
+
+### 2. Eslint 的配置
+
+```js
+//package.json中逐条配置
+"rules": {
+      "no-console": 0 // 0 代表关闭，1代表警告，2代表检查报错
+ },
+
+//vue.config.js中整体配置
+    // 关闭ESlint, 默认为true，编译后在控制台警告错误信息，但是不影响编译，
+    // 设置为‘error’的时候在页面报错显示错误内容，设置为false关闭提示
+ lintOnSave: false,
+```
+
+### 3. stylus 使用
+
+- 特点
+
+1.  简写大括号
+
+2.  简写封号
+
+3.  样式嵌套，层级明显
+
+    ```
+    #app
+        h1
+          color $color
+        .btn1
+          btnStyle(100px, 100px, red)
+        .btn2
+          btnStyle(200px, 200px, blue)
+        .content
+          font-size 24px
+          &.content1
+            color $color
+    ```
+
+
+     - 定义变量：复用
+
+        ```
+        $color = red
+        ```
+
+     - 定义混合（mixins）：代码复用，提高效率，灵活度高，等同于js的函数
+
+        ```
+         btnStyle(w, h, bg)
+            width w
+            height h
+            background bg
+            border none
+        ```
+
+     - 定义函数: 可进行计算，灵活度更高(这个我记得优化是最好别用css的计算，浪费性能)
+
+          ```
+          // 定义函数
+          add(a, b)
+              a + b
+          // 使用函数
+          padding add(10px, 20)
+          ```
+
+
+
+      - 父级引用
+
+             1. 语法：&
+
+             2. 作用：在子元素中能够找到父级元素
+
+                ```
+                 #app
+                    h1
+                      color $color
+                    .btn1
+                      btnStyle(100px, 100px, red)
+                    .btn2
+                      btnStyle(200px, 200px, blue)
+                    .content
+                      font-size 24px
+                      &.content1
+                        color $color
+                ```
+
+      - 导入文件
+
+             1. 语法: @import ''xx'
+
+      - 其他: [ https://stylus.bootcss.com/ ]()
+
+### 4. 移动端的适配
+
+- viewport 适配
+
+  目的=>布局视口 = 设备视口
+
+        ```
+        meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        ```
+
+- rem 适配（我记得媒体查询也行啊）
+
+1.  根据不同屏幕大小控制根节点 rem 字体大小
+
+2.  页面中的内容大小设置用 rem 从而达到适配的目的
+
+3.  防抖，防止用户频繁拉伸屏幕
+
+```js
+let timeoutId;
+window.addEventListener("pageshow", function() {
+  refreshRem();
+});
+window.addEventListener("resize", function() {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+  timeoutId = setTimeout(function() {
+    refreshRem();
+  }, 300);
+});
+
+function refreshRem() {
+  // 获取屏幕的宽度
+  let clientWidth = document.documentElement.clientWidth;
+  // 将屏幕宽度10等分
+  let fontValue = clientWidth / 10;
+
+  // 设定单位rem值的大小
+  let rem = fontValue;
+
+  // 设定body标签字体大小
+  document.body.style.fontSize = "12px";
+  // 设定html上fontsize的大小
+  document.documentElement.style.fontSize = rem + "px";
+}
+```
+
+### 5. 第三方库实现适配
+
+postcss-px2rem、lib-flexible
+
+```js
+//main.js
+import "lib-flexible/flexible";
+
+//vue.config.js
+const pex2rem = require("postcss-px2rem");
+const postcss = pex2rem({
+  remUnit: 37.5,
+});
+module.exports = {
+  lintOnSave: false,
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [postcss],
+      },
+    },
+  },
+};
+```
+
+stylus 报红
+
+```css
+<style lang="stylus" type="text/stylus"></style>
+```
+
 :::tip 提示
 重头再过一遍基础
 
